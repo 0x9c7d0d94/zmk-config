@@ -1,23 +1,5 @@
 /* source key position labels */
-#include "zmk-helpers/key-labels/36.h"
-
-/* map Zen's extra keys */
-#define X_LH  &kp LGUI      // thumb row, left
-#define X_RH  &smart_mouse  // thumb row, right
-
-#define X_LT &kp ESC // top row, left
-#define X_LM &kp TAB // middle row, left
-#define X_LB &kp LGUI // bottom row, left
-
-#define X_LH &kp LG(O) // thumb row, left
-
-
-#define X_RT &kp BSPC // top row, right
-#define X_RM &kp DEL // middle row, right
-#define X_RB &infinity_macro // bottom row, right
-
-#define X_RH &kp LG(GRAVE)  // thumb row, right
-
+#include "zmk-helpers/key-labels/42.h"
 
 /* activate bluetooth */
 #define CONFIG_WIRELESS 1
