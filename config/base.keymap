@@ -8,8 +8,6 @@
 #endif
 
 #include "zmk-helpers/helper.h"
-#include "zmk-helpers/unicode-chars/greek.dtsi"
-#include "zmk-helpers/unicode-chars/german.dtsi"
 
 #define DEF 0
 #define NAV 1
@@ -20,6 +18,7 @@
 #define MOUSE 6
 
 #include "combos.dtsi"  // requires layer aliases
+#include "macro.dtsi"  // custom macros
 #include "mouse.dtsi"
 #include "extra_keys.h"
 
