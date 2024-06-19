@@ -148,7 +148,7 @@ ZMK_MACRO(uc_shift,
     bindings = <&macro_press &mo UC &kp LSHFT>,
                <&macro_pause_for_release>,
                <&macro_release &mo UC &kp LSHFT>;
-)
+);
 
 
 // reuse basic mod-morph scheme
