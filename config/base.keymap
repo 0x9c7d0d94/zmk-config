@@ -18,7 +18,7 @@
 #define MOUSE 6
 
 #include "combos.dtsi"  // requires layer aliases
-#include "macro.dtsi"  // custom macros
+#include "macros.dtsi"  // custom macros
 #include "mouse.dtsi"
 #include "extra_keys.h"
 
