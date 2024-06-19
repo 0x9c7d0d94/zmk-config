@@ -129,6 +129,7 @@ ZMK_TRI_STATE(smart_mouse,
     ignored-layers = <MOUSE>;
 )
 
+
 /* Custom behaviors */
 
 // Alt+Tab swapper, requires PR #1366
@@ -172,6 +173,10 @@ SIMPLE_MORPH(qexcl, SFT, &kp EXCL, &kp QMARK)
 // tap: $ | shift + tap: £
 SIMPLE_MORPH(dllr_pound, SFT, &kp DLLR, &kp POUND)
 
+// tap: left/right parenthesis | shft + tap: less-than/greater-than
+SIMPLE_MORPH(lpar_lt, SFT, &kp LPAR, &kp LT)
+SIMPLE_MORPH(rpar_gt, SFT, &kp RPAR, &kp GT)
+
 // tap: space | shift + tap: dot -> space -> sticky shift | hold: activate layer
 ZMK_HOLD_TAP(lt_spc,
     flavor = "balanced";
@@ -198,6 +203,7 @@ ZMK_TAP_DANCE(copy_cut,
     tapping-term-ms = <200>;
     bindings = <&kp LC(INS)>, <&kp LC(X)>;
 )
+
 
 // misc aliases
 #define CANCEL      &kp K_CANCEL             // cancel caps-word, num-word and smart-mouse
