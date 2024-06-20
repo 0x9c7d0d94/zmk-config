@@ -176,7 +176,7 @@ ZMK_MACRO(dot_spc,
 )
 
 // tap: LG(Y) | shift + tap: LG(U) | hold: LG+NUM - used for infinity macro/key
-ZMK_HOLD_TAP(lt_infin,
+ZMK_HOLD_TAP(lt_infinity,
     flavor = "balanced";
     tapping-term-ms = <200>;
     quick-tap-ms = <QUICK_TAP_MS>;
@@ -219,7 +219,7 @@ ZMK_LAYER(base,
 //├────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤  ├─────────────┼─────────────┼─────────────┼─────────────┼──────────────┼─────────────┤
    &kp TAB   &hml LGUI A   &hml LALT R   &hml LCTRL S  &hml LSHFT T  &kp G            &kp M         &hmr RSHFT N  &hmr RCTRL E  &hmr RALT I   &hmr RGUI O    &kp DEL
 //├────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤  ├─────────────┼─────────────┼─────────────┼─────────────┼──────────────┼─────────────┤
-  &kp LGUI   &kp Z         &kp X         &kp C         &kp D         &kp V            &kp K         &kp H         &comma_morph  &dot_morph    &qexcl        &kp LG(Y) 
+  &kp LGUI   &kp Z         &kp X         &kp C         &kp D         &kp V            &kp K         &kp H         &comma_morph  &dot_morph    &qexcl         &lt_infinity 
 //╰────────┴─────────────┴─────────────┴─────────────┼─────────────┼─────────────┤  ├─────────────┼─────────────┼─────────────┴─────────────┴──────────────┴─────────────╯
                                          &kp LG(O)     &lt_spc NAV 0 &lt FN RET       SMART_NUM     &smart_shft   &kp LG(GRAVE) 
 //                                     ╰─────────────┴─────────────┴─────────────╯  ╰─────────────┴─────────────┴─────────────╯
