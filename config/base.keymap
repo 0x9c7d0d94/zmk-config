@@ -211,9 +211,19 @@ ZMK_TAP_DANCE(copy_cut,
 
 
 /* Keymap */
-ZMK_CONDITIONAL_LAYER(NAV FN, SYS)  // NAV + FN --> SYS
-ZMK_CONDITIONAL_LAYER(NUM FN, SYS)  // NUM + FN --> SYS
-
+/ {
+    conditional_layers {
+        compatible = "zmk,conditional-layers";
+        nav_fn_sys {
+            if-layers = <NAV FN>;
+            then-layer = <SYS>;
+        };
+        num_fn_sys {
+            if-layers = <NUM FN>;
+            then-layer = <SYS>;
+        };
+    };
+};
 
 ZMK_LAYER(base,
 //╭────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮  ╭─────────────┬─────────────┬─────────────┬─────────────┬──────────────┬─────────────╮
