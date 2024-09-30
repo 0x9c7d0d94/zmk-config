@@ -154,7 +154,7 @@ SIMPLE_MORPH(dot_morph, SFT, &kp DOT, &dot_inner_morph)
 SIMPLE_MORPH(dot_inner_morph, CTL, &kp COLON, &kp GREATER_THAN)
 
 // tap: excl | shift + tap: qmark
-SIMPLE_MORPH(qexcl, SFT, &kp EXCL, &kp QMARK)
+SIMPLE_MORPH(qexcl, SFT, &kp QMARK, &kp EXCL)
 
 // tap: $ | shift + tap: £
 SIMPLE_MORPH(dllr_pound, SFT, &kp DLLR, &kp POUND)
@@ -209,10 +209,10 @@ ZMK_TAP_DANCE(copy_cut,
 #define DSK_MGR     &kp LA(GRAVE)            // desktop manager
 #define VOL_DOWN    &hmr RSHFT C_VOL_DN
 
-/* Keymap */
 
 /* Keymap */
 ZMK_CONDITIONAL_LAYER(NAV FN, SYS)  // NAV + FN --> SYS
+ZMK_CONDITIONAL_LAYER(NUM FN, SYS)  // NUM + FN --> SYS
 
 
 ZMK_LAYER(base,
@@ -221,7 +221,7 @@ ZMK_LAYER(base,
 //├────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤  ├─────────────┼─────────────┼─────────────┼─────────────┼──────────────┼─────────────┤
    &kp TAB   &hml LGUI A   &hml LALT R   &hml LCTRL S  &hml LSHFT T  &kp G            &kp M         &hmr RSHFT N  &hmr RCTRL E  &hmr RALT I   &hmr RGUI O    &kp DEL
 //├────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤  ├─────────────┼─────────────┼─────────────┼─────────────┼──────────────┼─────────────┤
-  &kp LGUI   &kp Z         &kp X         &kp C         &kp D         &kp V            &kp K         &kp H         &comma_morph  &dot_morph    &qexcl         &lt_infinity
+  &kp LGUI   &kp Z         &kp X         &kp C         &kp D         &kp V            &kp K         &kp H         &comma_morph  &dot_morph    &qexcl         &kp LG(U)
 //╰────────┴─────────────┴─────────────┴─────────────┼─────────────┼─────────────┤  ├─────────────┼─────────────┼─────────────┴─────────────┴──────────────┴─────────────╯
                                          &kp LG(O)     &lt_spc NAV 0 &lt FN RET       SMART_NUM     &smart_shft   &kp LG(GRAVE)
 //                                     ╰─────────────┴─────────────┴─────────────╯  ╰─────────────┴─────────────┴─────────────╯
