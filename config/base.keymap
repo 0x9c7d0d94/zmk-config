@@ -210,28 +210,29 @@ ZMK_TAP_DANCE(copy_cut,
             tap-ms = <100>;    // 0.1-second key press duration
             bindings
                 = <&macro_tap &kp LS(3)>        // Time for Punishment
+                , <&macro_wait_time 500>        // Wait 0.5 seconds
                 , <&macro_tap &kp 5>            // Touch of Despair
-                , <&macro_tap &kp 2> // Serial Fire Bombs (3 taps)
-                , <&macro_tap &kp 2> // Serial Fire Bombs (3 taps)
-                , <&macro_tap &kp 2> // Serial Fire Bombs (3 taps)
-                , <&macro_tap &kp 2> // Serial Fire Bombs (3 taps)
-                , <&macro_tap &kp 2> // Serial Fire Bombs (3 taps)
-                , <&macro_tap &kp 2> // Serial Fire Bombs (3 taps)
-                , <&macro_tap &kp 3>      // Inferno Wave (2 taps)
-                , <&macro_tap &kp 3>      // Inferno Wave (2 taps)
-                , <&macro_tap &kp 3>      // Inferno Wave (2 taps)
-                , <&macro_tap &kp 3>      // Inferno Wave (2 taps)
+                , <&macro_wait_time 500>        // Wait 0.5 seconds
+                , <&macro_tap &kp 2 &kp 2 &kp 2> // Serial Fire Bombs (3 taps)
+                , <&macro_wait_time 500>        // Wait 0.5 seconds
+                , <&macro_tap &kp 3 &kp 3>      // Inferno Wave (2 taps)
+                , <&macro_wait_time 500>        // Wait 0.5 seconds
                 , <&macro_tap &kp LS(1)>        // Chain Lightning
+                , <&macro_wait_time 500>        // Wait 0.5 seconds
                 , <&macro_tap &kp 4>            // Decaying Touch
+                , <&macro_wait_time 500>        // Wait 0.5 seconds
                 , <&macro_tap &kp 5>            // Touch of Despair (second cast)
+                , <&macro_wait_time 500>        // Wait 0.5 seconds
                 , <&macro_tap &kp 1>            // Judgment Lightning (first cast)
-                , <&macro_tap &kp 1>            // Judgment Lightning (first cast)
-                , <&macro_tap &kp 1>            // Judgment Lightning (first cast)
-                , <&macro_tap &kp 1>            // Judgment Lightning (first cast)
-                , <&macro_tap &kp 1>            // Judgment Lightning (first cast)
+                , <&macro_wait_time 1000>       // 1-second wait before second cast
+                , <&macro_tap &kp 1>            // Judgment Lightning (second cast)
+                , <&macro_wait_time 500>        // Wait 0.5 seconds
                 , <&macro_tap &kp LS(1)>        // Chain Lightning (second cast)
+                , <&macro_wait_time 500>        // Wait 0.5 seconds
                 , <&macro_tap &kp LS(3)>        // Time for Punishment (before Karmic Haze)
+                , <&macro_wait_time 500>        // Wait 0.5 seconds
                 , <&macro_tap &kp LS(5)>        // Karmic Haze
+                , <&macro_wait_time 500>        // Wait 0.5 seconds
                 , <&macro_tap &kp LS(4)>        // Curse Explosion
                 ;
         };
@@ -338,7 +339,7 @@ ZMK_LAYER(gaming,
 //╭────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮  ╭─────────────┬─────────────┬─────────────┬─────────────┬──────────────┬─────────────╮
    &kp ESC   &kp N6        &kp N7        &kp W         &kp N1         &kp N2          &kp F1        &kp F2        &kp F3        &kp F4        &kp F5         &kp F6
 //├────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤  ├─────────────┼─────────────┼─────────────┼─────────────┼──────────────┼─────────────┤
-   &kp TAB   &kp N8        &kp A         &kp S         &kp D          &kp N3          &kp F7        &kp F8        &kp F9        &kp F10       &kp F11        &kp F12
+   &kp TAB   &long_aoe     &kp A         &kp S         &kp D          &kp N3          &kp F7        &kp F8        &kp F9        &kp F10       &kp F11        &kp F12
 //├────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤  ├─────────────┼─────────────┼─────────────┼─────────────┼──────────────┼─────────────┤
    &kp LALT  &kp N9        &kp N0        &kp RALT      &kp N4         &kp N5          &kp K         &kp H         &kp COMMA     &kp DOT       &kp EXCL       &to 0
 //╰────────┴─────────────┴─────────────┴─────────────┼─────────────┼─────────────┤  ├─────────────┼─────────────┼─────────────┴─────────────┴──────────────┴─────────────╯
