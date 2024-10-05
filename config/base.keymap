@@ -200,65 +200,44 @@ ZMK_TAP_DANCE(copy_cut,
     bindings = <&kp LC(INS)>, <&kp LC(X)>;
 )
 
-ZMK_MACRO(long_aoe,
-    wait-ms = <500>;  // 0.5-second wait between all key presses
-    tap-ms = <100>;   // 0.1-second key press duration
-    bindings = (
-        // Time for Punishment (initial)
-        &kp LS(3),
-        wait-ms = <500>;
 
-        // Touch of Despair
-        &kp 5,
-        wait-ms = <500>;
-
-        // Serial Fire Bombs (3 presses)
-        &kp 2,
-        &kp 2,
-        &kp 2,
-        wait-ms = <500>;
-
-        // Inferno Wave (2 presses)
-        &kp 3,
-        &kp 3,
-        wait-ms = <500>;
-
-        // Chain Lightning
-        &kp LS(1),
-        wait-ms = <500>;
-
-        // Decaying Touch
-        &kp 4,
-        wait-ms = <500>;
-
-        // Touch of Despair (second cast)
-        &kp 5,
-        wait-ms = <500>;
-
-        // Judgment Lightning (2 presses, with 1-second wait between)
-        &kp 1,
-        wait-ms = <1000>;  // 1-second wait between casts
-        &kp 1,
-        wait-ms = <500>;
-
-        // Chain Lightning (second cast)
-        &kp LS(1),
-        wait-ms = <500>;
-
-        // Time for Punishment (before Karmic Haze)
-        &kp LS(3),
-        wait-ms = <500>;
-
-        // Karmic Haze
-        &kp LS(5),
-        wait-ms = <500>;
-
-        // Curse Explosion
-        &kp LS(4)
-    );
-    reset-after-ms = <5000>;  // Reset macro if no press occurs for 5 seconds
-    loop;
-)
+/ {
+    macros {
+        long_aoe_rotation: long_aoe_rotation {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <500>;   // 0.5-second wait between key presses
+            tap-ms = <100>;    // 0.1-second key press duration
+            bindings
+                = <&macro_tap &kp LS(3)>        // Time for Punishment
+                , <&macro_wait_time 500>        // Wait 0.5 seconds
+                , <&macro_tap &kp 5>            // Touch of Despair
+                , <&macro_wait_time 500>        // Wait 0.5 seconds
+                , <&macro_tap &kp 2 &kp 2 &kp 2> // Serial Fire Bombs (3 taps)
+                , <&macro_wait_time 500>        // Wait 0.5 seconds
+                , <&macro_tap &kp 3 &kp 3>      // Inferno Wave (2 taps)
+                , <&macro_wait_time 500>        // Wait 0.5 seconds
+                , <&macro_tap &kp LS(1)>        // Chain Lightning
+                , <&macro_wait_time 500>        // Wait 0.5 seconds
+                , <&macro_tap &kp 4>            // Decaying Touch
+                , <&macro_wait_time 500>        // Wait 0.5 seconds
+                , <&macro_tap &kp 5>            // Touch of Despair (second cast)
+                , <&macro_wait_time 500>        // Wait 0.5 seconds
+                , <&macro_tap &kp 1>            // Judgment Lightning (first cast)
+                , <&macro_wait_time 1000>       // 1-second wait before second cast
+                , <&macro_tap &kp 1>            // Judgment Lightning (second cast)
+                , <&macro_wait_time 500>        // Wait 0.5 seconds
+                , <&macro_tap &kp LS(1)>        // Chain Lightning (second cast)
+                , <&macro_wait_time 500>        // Wait 0.5 seconds
+                , <&macro_tap &kp LS(3)>        // Time for Punishment (before Karmic Haze)
+                , <&macro_wait_time 500>        // Wait 0.5 seconds
+                , <&macro_tap &kp LS(5)>        // Karmic Haze
+                , <&macro_wait_time 500>        // Wait 0.5 seconds
+                , <&macro_tap &kp LS(4)>        // Curse Explosion
+                ;
+        };
+    };
+};
 
 
 // misc aliases
