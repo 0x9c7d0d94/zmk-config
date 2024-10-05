@@ -210,12 +210,26 @@ ZMK_TAP_DANCE(copy_cut,
             tap-ms = <100>;    // 0.1-second key press duration
             bindings
                 = <&macro_tap &kp (N9)>        // Focus
-                = <&macro_tap &kp LS(N3)>        // Time for Punishment
+                , <&macro_tap &kp LS(N3)>        // Time for Punishment
                 , <&macro_tap &kp N5>            // Touch of Despair
-                , <&macro_tap &kp N2> // Serial Fire Bombs (3 taps)
-                , <&macro_tap &kp N2> // Serial Fire Bombs (3 taps)
-                , <&macro_tap &kp N2> // Serial Fire Bombs (3 taps)
 
+                , <&macro_tap &kp N2> // Serial Fire Bombs (3 taps)
+                , <&macro_tap &kp N2> // Serial Fire Bombs (3 taps)
+                , <&macro_tap &kp N2> // Serial Fire Bombs (3 taps)
+                , <&macro_tap &kp N3>      // Inferno Wave (2 taps)
+                , <&macro_tap &kp N3>      // Inferno Wave (2 taps)
+                , <&macro_tap &kp LS(N1)>        // Chain Lightning
+
+                , <&macro_tap &kp N4>            // Decaying Touch
+                , <&macro_tap &kp N5>            // Touch of Despair (second cast)
+
+                , <&macro_tap &kp LS(N5)>        // Karmic Haze
+                , <&macro_tap &kp LS(N4)>        // Curse Explosion
+                , <&macro_tap &kp LS(N4)>        // Curse Explosion
+                
+                , <&macro_tap &kp N1>            // Judgment Lightning (first cast)
+                , <&macro_wait_time 1000>       // 1-second wait before second cast
+                , <&macro_tap &kp N1>            // Judgment Lightning (second cast)
                 ;
         };
     };
