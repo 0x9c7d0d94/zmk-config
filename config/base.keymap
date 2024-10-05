@@ -200,6 +200,66 @@ ZMK_TAP_DANCE(copy_cut,
     bindings = <&kp LC(INS)>, <&kp LC(X)>;
 )
 
+ZMK_MACRO(long_aoe,
+    wait-ms = <500>;  // 0.5-second wait between all key presses
+    tap-ms = <100>;   // 0.1-second key press duration
+    bindings = (
+        // Time for Punishment (initial)
+        &kp LS(3),
+        wait-ms = <500>;
+
+        // Touch of Despair
+        &kp 5,
+        wait-ms = <500>;
+
+        // Serial Fire Bombs (3 presses)
+        &kp 2,
+        &kp 2,
+        &kp 2,
+        wait-ms = <500>;
+
+        // Inferno Wave (2 presses)
+        &kp 3,
+        &kp 3,
+        wait-ms = <500>;
+
+        // Chain Lightning
+        &kp LS(1),
+        wait-ms = <500>;
+
+        // Decaying Touch
+        &kp 4,
+        wait-ms = <500>;
+
+        // Touch of Despair (second cast)
+        &kp 5,
+        wait-ms = <500>;
+
+        // Judgment Lightning (2 presses, with 1-second wait between)
+        &kp 1,
+        wait-ms = <1000>;  // 1-second wait between casts
+        &kp 1,
+        wait-ms = <500>;
+
+        // Chain Lightning (second cast)
+        &kp LS(1),
+        wait-ms = <500>;
+
+        // Time for Punishment (before Karmic Haze)
+        &kp LS(3),
+        wait-ms = <500>;
+
+        // Karmic Haze
+        &kp LS(5),
+        wait-ms = <500>;
+
+        // Curse Explosion
+        &kp LS(4)
+    );
+    reset-after-ms = <5000>;  // Reset macro if no press occurs for 5 seconds
+    loop;
+)
+
 
 // misc aliases
 #define CANCEL      &kp K_CANCEL             // cancel caps-word, num-word and smart-mouse
