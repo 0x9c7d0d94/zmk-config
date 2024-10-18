@@ -16,7 +16,7 @@
 #define FN 3
 #define SYS 4
 #define MOUSE 5
-#define GAMING 6
+#define GAM 6
 #define COMS 7
 
 #include "combos.dtsi"  // requires layer aliases
