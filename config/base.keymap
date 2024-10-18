@@ -206,40 +206,31 @@ ZMK_TAP_DANCE(copy_cut,
         long_aoe: long_aoe {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            wait-ms = <600>;   // 0.6-second wait between key presses
+            wait-ms = <500>;   // 0.5-second wait between key presses
             tap-ms = <100>;    // 0.1-second key press duration
             bindings
-                = <&macro_press>         // Macro runs when key is pressed
-                , <&macro_tap &kp (N9)>  // Focus
-                , <&macro_tap &kp LS(N3)>  // Time for Punishment
-                , <&macro_tap &kp N5>      // Touch of Despair
+                = <&kp (N9)>        // Focus
+                , <&kp LS(N3)>      // Time for Punishment
+                , <&kp N5>          // Touch of Despair
 
-                , <&macro_tap &kp N2>  // Serial Fire Bombs (3 taps)
-                , <&macro_tap &kp N2>
-                , <&macro_tap &kp N2>
-                , <&macro_tap &kp N3>  // Inferno Wave (2 taps)
-                , <&macro_tap &kp N3>
-                , <&macro_wait_time 500>
-                , <&macro_tap &kp LS(N1)>  // Chain Lightning
+                , <&kp N2>          // Serial Fire Bombs (3 taps)
+                , <&kp N2>
+                , <&kp N2>
+                , <&kp N3>          // Inferno Wave (2 taps)
+                , <&kp N3>
+                , <&kp LS(N1)>      // Chain Lightning
 
-                , <&macro_tap &kp N4>      // Decaying Touch
-                , <&macro_wait_time 500>
-                , <&macro_tap &kp N5>      // Touch of Despair (second cast)
+                , <&kp N4>          // Decaying Touch
 
-                , <&macro_tap &kp LS(N5)>  // Karmic Haze
-                , <&macro_wait_time 500>
-                , <&macro_tap &kp LS(N4)>  // Curse Explosion
-                , <&macro_tap &kp LS(N4)>
+                , <&kp N5>          // Touch of Despair (second cast)
+                , <&kp LS(N5)>      // Karmic Haze
+                , <&kp LS(N4)>      // Curse Explosion
+                 <&kp LS(N4)>      // Curse Explosion
 
-                , <&macro_wait_time 500>
-
-                , <&macro_tap &kp N1>      // Judgment Lightning (first cast)
-                , <&macro_wait_time 1500>  // 1.5-second wait before second cast
-                , <&macro_tap &kp N1>      // Judgment Lightning (second cast)
-                , <&macro_wait_time 500>
-                , <&macro_tap &kp LS(N1)>  // Chain Lightning
-
-                , <&macro_release>  // Stops macro when key is released
+                , <&kp N1>          // Judgment Lightning (first cast)
+                , <&macro_wait_time 2500>  // 2.5-second wait before second cast
+                , <&kp N1>          // Judgment Lightning (second cast)
+                , <&kp LS(N1)>      // Chain Lightning
                 ;
         };
     };
@@ -343,11 +334,11 @@ ZMK_LAYER(mouse,
 )
 ZMK_LAYER(gaming,
 //╭────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮  ╭─────────────┬─────────────┬─────────────┬─────────────┬──────────────┬─────────────╮
-   &kp ESC   &kp N6        &kp N7        &kp W         &kp N1         &kp N2          &kp F1        &kp F2        &kp F3        &kp F4        &kp F5         &kp F6
+   &kp ESC   &kp N2        &kp N1        &kp W         &kp N1         &kp N2          &kp F1        &kp F2        &kp F3        &kp F4        &kp F5         &kp F6
 //├────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤  ├─────────────┼─────────────┼─────────────┼─────────────┼──────────────┼─────────────┤
-   &kp TAB   &long_aoe      &kp A         &kp S         &kp D          &kp N3          &kp F7        &kp F8        &kp F9        &kp F10       &kp F11        &kp F12
+   &kp TAB   &kp N3        &kp A         &kp S         &kp D          &kp N3          &kp F7        &kp F8        &kp F9        &kp F10       &kp F11        &kp F12
 //├────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤  ├─────────────┼─────────────┼─────────────┼─────────────┼──────────────┼─────────────┤
-   &kp LALT  &kp N9        &kp N0        &kp RALT      &kp N4         &kp N5          &kp K         &kp H         &kp COMMA     &kp DOT       &kp EXCL       &to 0
+   &kp LALT  &kp N4        &kp N5        &kp C         &kp N5         &kp N4          &kp K         &kp H         &kp COMMA     &kp DOT       &kp EXCL       &to 0
 //╰────────┴─────────────┴─────────────┴─────────────┼─────────────┼─────────────┤  ├─────────────┼─────────────┼─────────────┴─────────────┴──────────────┴─────────────╯
                                          &kp LCTRL     &kp SPACE     &kp LSHIFT       &lt COMS ENTER &kp RSHFT    &kp RCTRL
 //                                     ╰─────────────┴─────────────┴─────────────╯  ╰─────────────┴─────────────┴─────────────╯
