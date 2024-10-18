@@ -225,7 +225,7 @@ ZMK_TAP_DANCE(copy_cut,
                 , <&kp N5>          // Touch of Despair (second cast)
                 , <&kp LS(N5)>      // Karmic Haze
                 , <&kp LS(N4)>      // Curse Explosion
-                 <&kp LS(N4)>      // Curse Explosion
+                , <&kp LS(N4)>      // Curse Explosion
 
                 , <&kp N1>          // Judgment Lightning (first cast)
                 , <&macro_wait_time 2500>  // 2.5-second wait before second cast
