@@ -16,8 +16,8 @@
 #define FN 3
 #define SYS 4
 #define MOUSE 5
-#define GAME 6
-#define COMS 7
+#define GME 6
+#define COM 7
 
 #include "combos.dtsi"  // requires layer aliases
 #include "mouse.dtsi"
@@ -343,7 +343,7 @@ ZMK_LAYER(game,
                                          &kp LCTRL     &kp SPACE     &kp LSHIFT       &lt COMS ENTER &kp RSHFT    &kp RCTRL
 //                                     ╰─────────────┴─────────────┴─────────────╯  ╰─────────────┴─────────────┴─────────────╯
 )
-ZMK_LAYER(coms,
+ZMK_LAYER(com,
 //╭────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮  ╭─────────────┬─────────────┬─────────────┬─────────────┬──────────────┬─────────────╮
    &kp ESC   &kp Q         &kp W         &kp F         &kp P         &kp B            &kp J         &kp L         &kp U         &kp Y         &kp SQT        &kp BSPC
 //├────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤  ├─────────────┼─────────────┼─────────────┼─────────────┼──────────────┼─────────────┤
