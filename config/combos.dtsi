@@ -18,11 +18,10 @@
 /* main keys */
 ZMK_COMBO(game_pt,   &kp N4,       LT1 LM1,     GAME, COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
 ZMK_COMBO(game_bg,   &kp N5,       LT0 LM0,     GAME, COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
+ZMK_COMBO(game_gv,   &kp N6,       LM0 LB0,     GAME, COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
 
-ZMK_COMBO(game_pb,   &kp N6,       LT1 LT0,     GAME, COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
-ZMK_COMBO(game_tg,   &kp N7,       LM1 LM0,     GAME, COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
-
-ZMK_COMBO(game_gv,   &kp N8,       LB0 LM0,     GAME, COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
+ZMK_COMBO(game_pb,   &kp N7,       LT1 LT0,     GAME, COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
+ZMK_COMBO(game_tg,   &kp N8,       LM1 LM0,     GAME, COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
 
 /* main keys mirrored */
 ZMK_COMBO(game_qa,   &kp N6,       LT4 LM4,     GAME, COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
