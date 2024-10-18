@@ -15,8 +15,8 @@
 
 
 /* Gaming layer combos */
-ZMK_COMBO(game_fs,  &kp GRAVE,     LB1 LB0,     GAME, COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
-ZMK_COMBO(game_sc,  &kp UNDER,     LB1 LB0,     GAME, COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
+ZMK_COMBO(game_fs,  &kp GRAVE,     LT2 LM2,     GAME, COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
+ZMK_COMBO(game_sc,  &kp UNDER,     LM2 LB2,     GAME, COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
 /* main keys */
 ZMK_COMBO(game_pt,   &kp N4,       LT1 LM1,     GAME, COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
 ZMK_COMBO(game_bg,   &kp N5,       LT0 LM0,     GAME, COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
