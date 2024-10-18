@@ -66,13 +66,14 @@ ZMK_COMBO(prcnt, &kp PRCNT,       RB3 RM3,     DEF NAV NUM, COMBO_TERM_SLOW, COM
 
 /* Gaming layer combos */
 /* main keys */
-ZMK_COMBO(game_pt,   &kp N6,       LT1 LM1,     GAME, COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
-ZMK_COMBO(game_bg,   &kp N7,       LT0 LM0,     GAME, COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
-ZMK_COMBO(game_td,   &kp N8,       LM1 LB1,     GAME, COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
-ZMK_COMBO(game_gv,   &kp N9,       LB0 LM0,     GAME, COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
-ZMK_COMBO(game_pb,   &kp N0,       LT1 LT0,     GAME, COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
-ZMK_COMBO(game_tg,   &kp MINUS,    LM1 LM0,     GAME, COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
-ZMK_COMBO(game_dv,   &kp EQUAL,    LB1 LB0,     GAME, COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
+ZMK_COMBO(game_pt,   &kp N4,       LT1 LM1,     GAME, COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
+ZMK_COMBO(game_bg,   &kp N5,       LT0 LM0,     GAME, COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
+
+ZMK_COMBO(game_pb,   &kp N6,       LT1 LT0,     GAME, COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
+ZMK_COMBO(game_tg,   &kp N7,       LM1 LM0,     GAME, COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
+
+ZMK_COMBO(game_gv,   &kp N8,       LB0 LM0,     GAME, COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
+
 /* main keys mirrored */
 ZMK_COMBO(game_qa,   &kp N6,       LT4 LM4,     GAME, COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
 ZMK_COMBO(game_wr,   &kp N7,       LT3 LM3,     GAME, COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
