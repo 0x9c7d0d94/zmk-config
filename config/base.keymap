@@ -203,36 +203,7 @@ ZMK_TAP_DANCE(copy_cut,
 
 / {
     macros {
-        long_aoe: long_aoe {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            wait-ms = <500>;   // 0.5-second wait between key presses
-            tap-ms = <100>;    // 0.1-second key press duration
-            bindings
-                = <&kp (N9)>        // Focus
-                , <&kp LS(N3)>      // Time for Punishment
-                , <&kp N5>          // Touch of Despair
 
-                , <&kp N2>          // Serial Fire Bombs (3 taps)
-                , <&kp N2>
-                , <&kp N2>
-                , <&kp N3>          // Inferno Wave (2 taps)
-                , <&kp N3>
-                , <&kp LS(N1)>      // Chain Lightning
-
-                , <&kp N4>          // Decaying Touch
-
-                , <&kp N5>          // Touch of Despair (second cast)
-                , <&kp LS(N5)>      // Karmic Haze
-                , <&kp LS(N4)>      // Curse Explosion
-                , <&kp LS(N4)>      // Curse Explosion
-
-                , <&kp N1>          // Judgment Lightning (first cast)
-                , <&macro_wait_time 2500>  // 2.5-second wait before second cast
-                , <&kp N1>          // Judgment Lightning (second cast)
-                , <&kp LS(N1)>      // Chain Lightning
-                ;
-        };
     };
 };
 
@@ -333,12 +304,13 @@ ZMK_LAYER(mouse,
 //                                     ╰─────────────┴─────────────┴─────────────╯  ╰─────────────┴─────────────┴─────────────╯
 )
 ZMK_LAYER(game,
+
 //╭────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮  ╭─────────────┬─────────────┬─────────────┬─────────────┬──────────────┬─────────────╮
    &kp ESC   &kp Q         &kp E         &kp W         &kp N1         &kp N2          &kp F1        &kp F2        &kp F3        &kp F4        &kp F5         &kp F6
 //├────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤  ├─────────────┼─────────────┼─────────────┼─────────────┼──────────────┼─────────────┤
    &kp TAB   &kp R         &kp A         &kp S         &kp D          &kp N3          &kp F7        &kp F8        &kp F9        &kp F10       &kp F11        &kp F12
 //├────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤  ├─────────────┼─────────────┼─────────────┼─────────────┼──────────────┼─────────────┤
-   &kp LALT  &kp Z        &kp X          &kp C         &kp MINUS      &kp EQUAL       &kp K         &kp H         &kp COMMA     &kp DOT       &kp EXCL       &to 0
+   &kp LALT  &kp Z        &kp X          &kp C         &kp MINUS      &kp N4          &kp K         &kp H         &kp COMMA     &kp DOT       &kp EXCL       &to 0
 //╰────────┴─────────────┴─────────────┴─────────────┼─────────────┼─────────────┤  ├─────────────┼─────────────┼─────────────┴─────────────┴──────────────┴─────────────╯
                                          &kp LCTRL     &kp SPACE     &kp LSHIFT       &lt COMS ENTER &kp RSHFT    &kp RCTRL
 //                                     ╰─────────────┴─────────────┴─────────────╯  ╰─────────────┴─────────────┴─────────────╯
